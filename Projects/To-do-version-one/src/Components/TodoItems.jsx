@@ -3,9 +3,10 @@ import Item from "./Item";
 import styles from "./Todoitems.module.css";
 const todoItems = ({todoItems})=>{
     return <>
-     <div className ="itemsContainer" key="key">
+     <div className ={styles.itemsContainer} >
         
-           {todoItems.map(item=> <Item itemName={item.name} itemDate={item.dueDate}></Item>)}
+           {todoItems.map(item=>
+            ( <Item key={item.id} itemName={item.name} itemDate={item.dueDate}></Item>))}
         
      
 
